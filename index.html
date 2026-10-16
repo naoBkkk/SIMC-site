@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080808">
+  <title>Team SIMC</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      color: white;
+      background-color: #080808;
+      background-image:
+        linear-gradient(
+          rgba(0, 0, 0, 0.45),
+          rgba(0, 0, 0, 0.78)
+        ),
+        url("https://raw.githubusercontent.com/naoBkkk/ZDJ/refs/heads/main/image%20(10).png");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    }
+
+    main {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 50px 20px;
+    }
+
+    .content {
+      width: 100%;
+      max-width: 850px;
+      padding: 40px;
+      background: rgba(0, 0, 0, 0.48);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 16px;
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      box-shadow: 0 15px 60px rgba(0, 0, 0, 0.35);
+      animation: appear 1s ease both;
+    }
+
+    h1 {
+      font-size: clamp(38px, 8vw, 68px);
+      text-align: center;
+      letter-spacing: 8px;
+      margin-bottom: 12px;
+      text-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #aaa;
+      font-size: 12px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      margin-bottom: 35px;
+    }
+
+    .divider {
+      width: 65px;
+      height: 3px;
+      background: white;
+      margin: 0 auto 30px;
+      border-radius: 5px;
+    }
+
+    #message {
+      font-size: 16px;
+      line-height: 1.9;
+      color: #e0e0e0;
+      white-space: pre-line;
+      overflow-wrap: anywhere;
+    }
+
+    .contact {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .contact a {
+      display: inline-block;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 13px 24px;
+      border: 1px solid rgba(255, 255, 255, 0.45);
+      border-radius: 6px;
+      transition: background 0.25s, color 0.25s;
+    }
+
+    .contact a:hover {
+      background: white;
+      color: black;
+    }
+
+    footer {
+      text-align: center;
+      color: #888;
+      font-size: 11px;
+      letter-spacing: 3px;
+      margin-top: 35px;
+    }
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      body {
+        background-attachment: scroll;
+      }
+
+      main {
+        padding: 20px 12px;
+      }
+
+      .content {
+        padding: 28px 20px;
+      }
+
+      h1 {
+        letter-spacing: 5px;
+      }
+
+      .subtitle {
+        letter-spacing: 3px;
+      }
+
+      #message {
+        font-size: 14px;
+        line-height: 1.8;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <section class="content">
+      <h1>SIMC</h1>
+      <p class="subtitle">Our Story · Our Vision · Our Art</p>
+      <div class="divider"></div>
+
+      <p id="message"></p>
+
+      <div class="contact">
+        <a id="contactLink"
+           href="https://discord.com/"
+           target="_blank"
+           rel="noopener noreferrer">
+          Contact Us on Discord
+        </a>
+      </div>
+
+      <footer>TEAM SIMC © 2026</footer>
+    </section>
+  </main>
+
+  <script>
+    // EDIT YOUR WEBSITE TEXT HERE
+    const myText = `Team SIMC was built through years of struggle and unsuccessful Roblox exploits.
+
+We're trying to become the biggest, but it's difficult when we receive little to no support. We're also working to get rid of skids in our community.
+
+We believe exploiting is an art. It should have meaning, creativity, and a unique style. Some people think that skidding will make them the best, but that isn't true.
+
+We make mistakes, learn from them, and keep improving. We often have only a few people available to help at a time, making it difficult to achieve everything we're working toward.
+
+People dismiss this as kids' stuff, but for us, it's years of hard work. We do it for the satisfaction of the people who understand what we're trying to create.
+
+The real world feels like it's going downhill, just like Roblox's player activity pie chart. Despite everything, we're still pushing forward, trying to become the biggest.
+
+If you're willing to help us on our journey, contact @riprc7 on Discord.`;
+
+    document.getElementById("message").textContent = myText;
+
+    // EDIT YOUR CONTACT LINK HERE
+    // Replace this with your Discord invite or profile URL.
+    const discordLink = "https://discord.com/";
+    document.getElementById("contactLink").href = discordLink;
+  </script>
+</body>
+</html>
